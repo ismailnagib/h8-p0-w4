@@ -1,5 +1,5 @@
 function ubahHuruf(kata) {
-    var alfabet = "abcdefghijklmnopqrstuvwxyz";
+    var alfabet = "abcdefghijklmnopqrstuvwxyza";
     var setelahDirubah = "";
     for (var i = 0; i < kata.length; i++) {
         var j = alfabet.indexOf(kata[i]);
