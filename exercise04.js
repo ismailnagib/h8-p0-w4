@@ -27,7 +27,13 @@ function cariModus(arr) {
   } else {
     return -1;
   }
-  var maxIndex = counts.indexOf(max);
+  // var maxIndex = counts.indexOf(max); // ini cara magic
+  var maxIndex = 0;
+  for (var k = counts.length - 1; k >= 0; k--) {
+    if (counts[k] === max) {
+      maxIndex = k;
+    }
+  }
   modus = sameNums[maxIndex];
   if (max === arr.length - 1) {
     return -1;
