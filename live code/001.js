@@ -42,14 +42,13 @@ Dilarang menggunakan built-in function:
 // CODE
 
 function reverseEven (arr) {
-  var reversed = "";
   for (var i = 0; i < arr.length; i++) {
+    var reversed = "";
     if ((i + 1) % 2 === 1) {
       for ( var j = arr[i].length - 1; j >= 0; j--) {
         reversed += arr[i][j];
       }
-      arr.splice(i, 1, reversed);
-      reversed = "";
+      arr[i] = reversed;
     }
   }
   return arr;
